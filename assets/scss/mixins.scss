@@ -1,8 +1,9 @@
-@mixin flexStyle($dp, $fw, $ai, $jc){
-    display: $dp;
-    flex-wrap: $fw;
-    align-items: $ai;
+@mixin flexStyle($jc, $gap){
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: $jc;
+    gap: $gap;
 }
 
 @mixin textStyle($fw, $fz, $lh, $ls){
@@ -12,17 +13,10 @@
     letter-spacing: $ls;
 }
 
-@mixin media-tablet{
-    @media only screen and (max-width: 834px){
-        html, body{
-        width: 834px;
-        }
-
-        // * ---------- HEADER ----------
+@mixin media-desktop{
+    @media only screen and (max-width: 970px){
         header{
             > div{
-                margin: 16px 32px;
-
                 nav{
                     display: none;
                 }
@@ -31,9 +25,8 @@
                     width: 24px;
                     background-color: white;
                     border: none;
-                    @include flexStyle(flex, wrap, center, space-between);
+                    @include flexStyle(space-between, 4px);
                     flex-direction: column;
-                    gap: 4px;
                     
                     div{
                         width: 16px;
@@ -49,25 +42,55 @@
 
             // ---------- HERO ----------
             section:nth-of-type(1){
-                margin: 0 40px;
-                padding-top: 180px;
+                margin: 0 5vw;
+            }
+
+            // ---------- InfoCards ----------
+            section:nth-of-type(2){
+                padding: 64px 5vw;
+            }
+
+            // ---------- CarCards ----------
+            section:nth-of-type(3){
+                padding: 59px 5vw;
+                background-size: 100%;
+                background-position: top 0 center;
+            }
+        }
+    }
+}
+
+@mixin media-tablet{
+    @media only screen and (max-width: 834px){
+
+        // * ---------- HEADER ----------
+        header{
+            > div{
+                margin: 16px 4vw;
+            }
+        }
+
+        // * ---------- MAIN ----------
+        main{
+
+            // ---------- HERO ----------
+            section:nth-of-type(1){
+                margin: 0 5vw;
                 padding-bottom: 30px;
-                
-                h1{
-                    @include textStyle(900, 68px, 50px, 0);
-                    width: 230px;
-                    margin-left: 93px;
-                    margin-bottom: 70px;
-                }
 
                 article{
                     margin-left: 0;
                 }
             }
 
+            // ---------- InfoCards ----------
+            section:nth-of-type(2){
+                padding: 64px 5vw;
+            }
+
             // ---------- CarCards ----------
             section:nth-of-type(3){
-                padding: 59px 0;
+                padding: 59px 5vw;
                 background-size: 100%;
                 background-position: top 0 center;
             }
@@ -78,13 +101,13 @@
 @mixin media-mobile{
     @media only screen and (max-width: 394px){
         html, body{
-            width: 393px;
+            min-width: 393px;
             }
 
             // * ---------- HEADER ----------
             header{
                 > div{
-                    margin: 16px;
+                    margin: 16px 2vw;
                 }
             }
 

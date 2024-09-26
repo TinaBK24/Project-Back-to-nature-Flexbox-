@@ -18,19 +18,21 @@
 }
 
 .info_cards, main section:nth-of-type(2) article:nth-of-type(2) div {
+  width: 220px;
+  height: 260px;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 16px;
   box-shadow: inset -2px -2px 2px rgba(0, 0, 0, 0.25);
   border: 1px solid black;
-  padding: 16px 50px 24px 50px;
+  padding: 16px 0 24px 0;
   display: flex;
-  gap: 12px;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 
 .car_cards, main section:nth-of-type(3) article:nth-of-type(2) > div {
+  width: 353px;
   display: flex;
   flex-direction: column;
   border-radius: 50px;
@@ -62,7 +64,7 @@
 }
 
 html, body {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -71,7 +73,8 @@ header > div {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  margin: 16px 160px;
+  gap: auto;
+  margin: 16px 10vw;
   padding: 8px;
   border-radius: 45px;
   border: 1px solid black;
@@ -80,7 +83,7 @@ header > div img {
   width: 52px;
 }
 header > div nav {
-  gap: 40px;
+  gap: 1.5vw;
 }
 header > div nav a {
   text-decoration: none;
@@ -99,22 +102,13 @@ header > div button {
 }
 
 main section:nth-of-type(1) {
-  margin: 12px 100px;
-  padding-top: 290px;
+  margin: 12px 7vw;
+  padding-top: 40%;
   padding-bottom: 82px;
   background-image: url("../img/Ilustration_Hero.png");
   background-position: top 0 center;
   background-size: 100%;
   background-repeat: no-repeat;
-}
-main section:nth-of-type(1) h1 {
-  font-weight: 900;
-  font-size: 119px;
-  line-height: 87px;
-  letter-spacing: 0;
-  width: 440px;
-  margin-left: 136px;
-  margin-bottom: 87px;
 }
 main section:nth-of-type(1) article {
   display: flex;
@@ -122,21 +116,21 @@ main section:nth-of-type(1) article {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin-left: 104px;
 }
 main section:nth-of-type(1) article button:nth-of-type(3) {
   background-color: #A9CBA6;
   color: white;
 }
 main section:nth-of-type(2) {
-  padding: 64px 0;
+  padding: 64px 7vw;
   background-image: url("../img/Ilustration_InfoCard.png");
   background-repeat: no-repeat;
-  background-position: left 0 top 70px;
+  background-position: left 0 top 30%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  gap: 64px;
   flex-direction: column;
   gap: 64px;
 }
@@ -155,7 +149,8 @@ main section:nth-of-type(2) article:nth-of-type(1) p {
   font-size: 16px;
   line-height: auto;
   letter-spacing: 0.24px;
-  width: 600px;
+  max-width: 600px;
+  text-align: center;
 }
 main section:nth-of-type(2) article:nth-of-type(2) {
   display: flex;
@@ -168,7 +163,7 @@ main section:nth-of-type(2) article:nth-of-type(2) div img {
   width: 120px;
 }
 main section:nth-of-type(2) article:nth-of-type(2) div p {
-  width: 120px;
+  max-width: 120px;
   text-align: center;
 }
 main section:nth-of-type(2) article:nth-of-type(2) div p:nth-of-type(1) {
@@ -189,17 +184,17 @@ main section:nth-of-type(2) button {
   color: white;
 }
 main section:nth-of-type(3) {
-  padding: 64px 0 98px 0;
+  padding: 64px 7vw 86px 7vw;
   background-image: url("../img/Ilustration_CarCards.png");
-  background-size: 100% 100%;
-  background-position: center;
+  background-size: 100% auto;
+  background-position: top 0 center;
   background-repeat: no-repeat;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   gap: 64px;
+  flex-direction: column;
 }
 main section:nth-of-type(3) article:nth-of-type(1) {
   text-align: center;
@@ -216,7 +211,8 @@ main section:nth-of-type(3) article:nth-of-type(1) p {
   font-size: 16px;
   line-height: auto;
   letter-spacing: 0.24px;
-  width: 600px;
+  max-width: 600px;
+  text-align: center;
 }
 main section:nth-of-type(3) article:nth-of-type(2) {
   display: flex;
@@ -230,6 +226,7 @@ main section:nth-of-type(3) article:nth-of-type(2) > div > div div {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  gap: auto;
 }
 main section:nth-of-type(3) article:nth-of-type(2) > div > div div p {
   font-weight: 900;
@@ -262,13 +259,13 @@ main section:nth-of-type(3) article:nth-of-type(2) > div > div button:nth-of-typ
 }
 
 footer {
-  padding: 24px 0;
+  padding: 24px 7vw;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   gap: 24px;
+  flex-direction: column;
   border-top: 2px solid black;
 }
 footer nav {
@@ -276,7 +273,7 @@ footer nav {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 55px;
+  gap: 3vw;
 }
 footer nav a {
   text-decoration: none;
@@ -291,7 +288,7 @@ footer article {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 5vw;
 }
 footer article div {
   width: 30px;
@@ -302,6 +299,7 @@ footer article div {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  gap: auto;
 }
 footer article div i {
   font-size: 35px;
@@ -313,14 +311,7 @@ footer p {
   letter-spacing: 0.38px;
 }
 
-@media only screen and (max-width: 834px) {
-  html, body {
-    width: 834px;
-  }
-
-  header > div {
-    margin: 16px 32px;
-  }
+@media only screen and (max-width: 970px) {
   header > div nav {
     display: none;
   }
@@ -332,8 +323,8 @@ footer p {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
     gap: 4px;
+    flex-direction: column;
   }
   header > div button div {
     width: 16px;
@@ -342,35 +333,45 @@ footer p {
   }
 
   main section:nth-of-type(1) {
-    margin: 0 40px;
-    padding-top: 180px;
-    padding-bottom: 30px;
+    margin: 0 5vw;
   }
-  main section:nth-of-type(1) h1 {
-    font-weight: 900;
-    font-size: 68px;
-    line-height: 50px;
-    letter-spacing: 0;
-    width: 230px;
-    margin-left: 93px;
-    margin-bottom: 70px;
+  main section:nth-of-type(2) {
+    padding: 64px 5vw;
+  }
+  main section:nth-of-type(3) {
+    padding: 59px 5vw;
+    background-size: 100%;
+    background-position: top 0 center;
+  }
+}
+@media only screen and (max-width: 834px) {
+  header > div {
+    margin: 16px 4vw;
+  }
+
+  main section:nth-of-type(1) {
+    margin: 0 5vw;
+    padding-bottom: 30px;
   }
   main section:nth-of-type(1) article {
     margin-left: 0;
   }
+  main section:nth-of-type(2) {
+    padding: 64px 5vw;
+  }
   main section:nth-of-type(3) {
-    padding: 59px 0;
+    padding: 59px 5vw;
     background-size: 100%;
     background-position: top 0 center;
   }
 }
 @media only screen and (max-width: 394px) {
   html, body {
-    width: 393px;
+    min-width: 393px;
   }
 
   header > div {
-    margin: 16px;
+    margin: 16px 2vw;
   }
 
   main section:nth-of-type(1) {
